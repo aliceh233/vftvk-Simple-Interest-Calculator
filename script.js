@@ -10,14 +10,19 @@ function compute()
         var interest = principal * years * rate/100;
         var year = new Date().getFullYear()+parseInt(years);
         document.getElementById("result").innerHTML=
-        'If you deposit ' + principal + ',<br/>' +
-        'at an interest rate of ' + rate + '%.<br/>' +
-        'You will receive an amount of ' + interest + ',<br/>' +
-        'in the year ' + year;
+        'If you deposit ' + '<span id="yellow">' + principal + '</span>' + ',<br/>' +
+        'at an interest rate of ' + '<span id="yellow">' + rate + '</span>' + '%.<br/>' +
+        'You will receive an amount of ' + '<span id="yellow">' + interest + '</span>' + ',<br/>' +
+        'in the year ' + '<span id="yellow">' + year + '</span>';
     }
 }
 function updateRate() {
     var rateVal = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateVal+"%";
+    if (rateVal > 10) {
+        document.getElementById("rate_val").style.color = "red";
+    } else {
+        document.getElementById("rate_val").style.color = "blue";
+    }
 }
         
