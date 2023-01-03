@@ -21,8 +21,12 @@ function updateRate() {
     document.getElementById("rate_val").innerText=rateVal+"%";
     if (rateVal > 10) {
         document.getElementById("rate_val").style.color = "red";
+        document.getElementById("notice").innerText = "Large Rate! whooohoo!";
+        document.getElementById("notice").style.color = "red";
     } else {
         document.getElementById("rate_val").style.color = "blue";
+        document.getElementById("notice").innerText = "Normal Rate!";
+        document.getElementById("notice").style.color = "blue";
     }
 }
         
